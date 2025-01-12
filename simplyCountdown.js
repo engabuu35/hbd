@@ -28,9 +28,9 @@ const w = (n, e, o, t, l, d) => {
  *  - mira01
  */
 const m = {
-  year: 2024,
-  month: 12,
-  day: 25,
+  year: 2025,
+  month: 1,
+  day: 13,
   hours: 0,
   minutes: 0,
   seconds: 0,
