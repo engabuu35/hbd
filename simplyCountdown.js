@@ -195,7 +195,7 @@ const y = (n, e) => {
   }
   return y(n, o);
 };
-export {
-  x as default
-};
+
+window.simplyCountdown = x;
+
 //# sourceMappingURL=simplyCountdown.js.map
