@@ -1,0 +1,189 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #7a7a7b;
+    --secondary-color: rgb(199, 200, 204);
+    --background-color: rgb(227, 225, 217);
+    --text-color: black;
+}/* jenis */
+
+.jenis h2 {
+    margin-top: 2.5rem;
+    font-family: "Cookie", serif;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-align : center;
+    font-size: 3.5rem;
+}
+.jenis p,
+.contact p {
+    text-align: center;
+    max-width: 32rem;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.jenis h2 span,
+.hadiah h2 span,
+.contact h2 span {
+    color: var(--primary-color);
+    font-family: "Cookie", serif;
+    font-weight: 900;
+}
+.jenis .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.jenis .text .jenis-card .jenis-card-content p{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    text-align: justify;
+    justify-content: center;
+    max-width: 100rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    padding-bottom: 4rem;
+}
+
+.jenis .row .jenis-card {
+    display: flex; /* Ubah menjadi flexbox */
+    align-items: center;
+    justify-content: space-between; /* Jarak antara paragraf dan gambar */
+    flex-direction: column-reverse; /* Gambar di kanan, teks di kiri */
+    text-align: left; /* Teks rata kiri */
+    padding: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border: 1px solid var(--secondary-color); /* Opsional: Tambahkan border */
+    border-radius: 10px; /* Opsional: Tambahkan sudut melengkung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opsional: Tambahkan bayangan */
+}
+
+
+.jenis .row .jenis-card img {
+    border-radius: 0; /* Opsional: Sudut melengkung */
+    aspect-ratio: 1/1; /* Pertahankan aspek rasio */
+    object-fit: cover; /* Jaga gambar tetap proporsional */
+    width: 350px; /* Tetapkan lebar gambar */
+    height: 350px; /* Tetapkan tinggi gambar */
+    margin-left: 0.5rem; /* Jarak antara gambar dan teks */
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.jenis .row .jenis-card .jenis-card-content {
+    flex: 1; /* Paragraf mengambil sisa ruang */
+    padding-right: 1rem; /* Tambahkan jarak antara paragraf dan gambar */
+}
+
+
+.jenis .row .jenis-card .jenis-card-content p {
+    margin-top: 1rem;
+    font-size: 1rem; /* Ukuran teks */
+    font-weight: 300;
+    line-height: 1.6; /* Jarak antar baris */
+    color: var(--text-color); /* Warna teks */
+}
+
+.icon-song{
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+    position: fixed;
+    bottom: 1.3rem;
+    right: 1.3rem;
+    cursor: pointer;
+    color: black;
+    opacity: 0.8; 
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    line-height: 0;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 80%;
+    }
+}
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;    
+    }
+    .jenis h2{
+        font-size: 4.5rem;
+    }
+    .jenis p,
+    .hadiah p{
+        font-size: 1.3rem;
+    }
+
+    .icon-song{
+        width: 3rem;
+        height: 3rem;
+        font-size: 4rem;
+        position: fixed;
+        bottom: 2.2rem;
+        right: 2.2rem;
+    }
+    .jenis .row .jenis-card .jenis-card-content p{
+        font-size: 1.2rem;
+    }
+    .jenis .text .jenis-card .jenis-card-content p{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        text-align: justify;
+        justify-content: center;
+        max-width: 100rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+/* Mobile */
+@media (max-width: 500px) {
+    html {
+        font-size: 55%;
+    }
+    .icon-song{
+        width: 3rem;
+        height: 3rem;
+        font-size: 2.5rem;
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+    }
+}

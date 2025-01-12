@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- icon web -->
+    <link rel="icon" href="img/icon.png" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- S Countdown -->
+    <link rel="stylesheet" href="default.css">
+    <script src="simplyCountdown.js"></script>
+    
+</head>
+<body>
+    <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex 
+    justify-content-center align-items-center">
+        <main>
+            <h4>Kepada bubub tersayangg</h4>
+            <h1>Aufardana</h1>
+            <p>yang ultahnya sudah didepan mata, dalamm :  </p>
+
+            <div class="my-countdown simply-countdown"></div>
+
+            <a id="lihat-undangan" href="2/index2.html" class="btn btn-lg" style="pointer-events: none; opacity: 0.5;">Lihat Ucapan</a>
+
+        </main>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script type="module">
+        import simplyCountdown from '/simplyCountdown.js';
+    
+        simplyCountdown('.my-countdown', {
+        year: 2025, // Target year (required)
+        month: 1, // Target month [1-12] (required)
+        day: 13, // Target day [1-31] (required)
+        hours: 0, // Target hour [0-23], default: 0
+        minutes: 0, // Target minute [0-59], default: 0
+        seconds: 0, // Target second [0-59], default: 0
+        words: { // Custom labels, with lambda for plurals
+            days: { root: 'day', lambda: (root, n) => n > 1 ? root + 's' : root },
+            hours: { root: 'hour', lambda: (root, n) => n > 1 ? root + 's' : root },
+            minutes: { root: 'minute', lambda: (root, n) => n > 1 ? root + 's' : root },
+            seconds: { root: 'second', lambda: (root, n) => n > 1 ? root + 's' : root }
+        },
+        plural: true, // Gunakan bentuk jamak untuk kata
+    inline: false, // Tampilkan countdown dalam satu baris
+    inlineClass: 'simply-countdown-inline', // Kelas CSS untuk inline
+    enableUtc: false, // Gunakan waktu lokal
+    onEnd: () => { // Fungsi yang dijalankan saat countdown selesai
+        const button = document.getElementById('lihat-undangan');
+        if (button) {
+            button.removeAttribute('disabled'); // Aktifkan tombol
+            button.style.cursor = 'pointer';   // Ubah kursor saat hover
+            button.style.backgroundColor = '#ff69b4'; // Ubah warna tombol
+            button.style.pointerEvents = 'auto'; // Aktifkan klik
+            button.style.opacity = '1'; // Tombol terlihat aktif
+        }
+    },
+    refresh: 1000, // Perbarui setiap detik
+    sectionClass: 'simply-section', // Kelas untuk setiap bagian
+    amountClass: 'simply-amount', // Kelas untuk angka
+    wordClass: 'simply-word', // Kelas untuk kata
+    zeroPad: false, // Tidak perlu tambahkan 0 di depan angka
+    countUp: false // Hitung mundur, bukan hitung naik
+    });
+    </script>
+</body>
+</html>

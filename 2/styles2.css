@@ -1,0 +1,501 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #7a7a7b;
+    --secondary-color: rgb(199, 200, 204);
+    --background-color: rgb(227, 225, 217);
+    --text-color: black;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    background-color: rgba(143, 143, 143, 0.8);
+    border-bottom: 1px solid var(--secondary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo img{
+    width: 2.5rem;
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--text-color);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.1rem;
+    border-bottom: 0.15rem solid var(--text-color);
+    transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;    
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--text-color);
+}
+
+#daftar-menu {
+    display: none;    
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(img/kueh.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, 
+    rgb(227, 225, 217) 5%,  
+    rgba(243, 243, 243, 0) 10%);
+
+}
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;  
+}
+.hero .content h1{
+    font-family: "Knewave", serif;
+    font-size: 6rem;
+    color: whitesmoke;
+    text-shadow: 
+        1.5px 1.5px 0 rgb(0, 0, 0),  /* Bayangan kanan bawah */
+        -1.5px -1.5px 0 rgb(0, 0, 0), /* Bayangan kiri atas */
+        -1.5px 1.5px 0 rgb(0, 0, 0),  /* Bayangan kiri bawah */
+        1.5px -1.5px 0 rgb(0, 0, 0);  /* Bayangan kanan atas */
+    line-height: 1.2;
+}
+.hero .content h1 span {
+    font-family: "Knewave", serif;
+    color: rgb(223, 190, 0);
+    text-shadow :
+    1px 1px 0 rgb(0, 0, 0),  /* Bayangan kanan bawah */
+    -1px -1px 0 rgb(0, 0, 0), /* Bayangan kiri atas */
+    -1px 1px 0 rgb(0, 0, 0),  /* Bayangan kiri bawah */
+    1px -1px 0 rgb(0, 0, 0);  /* Bayangan kanan atas */
+}
+.hero .content h1 span span{
+    font-size: 4rem;
+}
+
+.hero .content p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.948);
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    border-radius: 15px; /* Opsional: Sudut melengkung */
+    background-color: rgb(223, 190, 0);
+}
+
+/* About */
+.about, .jenis, .hadiah, .contact {
+    padding: 6.5rem 7% 1.4rem;
+}
+.about h2 {
+    text-align : center;
+    font-size: 2.6rem;
+    margin-bottom: 2.8rem;
+}
+.about h2 span{
+    font-family: "Sacramento", serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+.jenis h2 span,
+.hadiah h2 span,
+.contact h2 span {
+    color: var(--primary-color);
+}
+.about .row {
+    display: flex;
+}
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+.about .row .about-img img {
+    width: 100%;
+    border-radius: 2%;
+}
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+.about .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.about .row .content p{
+    margin-bottom: 0.8rem;
+    font-size: 0.91rem;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+/* jenis */
+.jenis h2 {
+    margin-bottom: 1rem;
+    text-align : center;
+    font-size: 2.6rem;
+}
+.jenis p,
+.contact p {
+    text-align: center;
+    max-width: 32rem;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.jenis .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    justify-content: center;
+}
+
+.jenis .row .jenis-card {
+    display: flex; /* Ubah menjadi flexbox */
+    align-items: center;
+    justify-content: space-between; /* Jarak antara paragraf dan gambar */
+    flex-direction: column-reverse; /* Gambar di kanan, teks di kiri */
+    text-align: left; /* Teks rata kiri */
+    padding: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border: 1px solid var(--secondary-color); /* Opsional: Tambahkan border */
+    border-radius: 10px; /* Opsional: Tambahkan sudut melengkung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opsional: Tambahkan bayangan */
+}
+
+.jenis .row .jenis-card img {
+    border-radius: 50%; /* Opsional: Sudut melengkung */
+    aspect-ratio: 1/1; /* Pertahankan aspek rasio */
+    object-fit: cover; /* Jaga gambar tetap proporsional */
+    width: 200px; /* Tetapkan lebar gambar */
+    height: 200px; /* Tetapkan tinggi gambar */
+    margin-left: 1.5rem; /* Jarak antara gambar dan teks */
+}
+
+.jenis .row .jenis-card .jenis-card-content {
+    flex: 1; /* Paragraf mengambil sisa ruang */
+    padding-right: 1rem; /* Tambahkan jarak antara paragraf dan gambar */
+}
+
+.jenis .row .jenis-card .jenis-card-content p {
+    margin-top: 1rem;
+    font-size: 1rem; /* Ukuran teks */
+    font-weight: 300;
+    line-height: 1.6; /* Jarak antar baris */
+    color: var(--text-color); /* Warna teks */
+}
+
+
+/* Hadiah */
+.hadiah{
+    min-height: 85vh;
+}
+.hadiah h2{
+    margin-bottom: 1rem;
+    text-align : center;
+    font-size: 2.6rem;
+}
+.hadiah p {
+    text-align: center;
+    max-width: 32rem;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.hadiah .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.hadiah .jenis-hadiah a {
+    text-decoration: none; /* Hilangkan garis bawah */
+    color: inherit; /* Warna mengikuti elemen induk */
+}
+
+.hadiah .jenis-hadiah a:visited {
+    color: inherit; /* Warna tetap sama setelah diklik */
+}
+
+.hadiah .jenis-hadiah a:hover{
+    color: var(--primary-color);
+}
+
+.hadiah .jenis-hadiah{
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.hadiah .jenis-hadiah .hadiah-img{
+    border-radius: 15%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-left: 3rem;
+    margin-right: 3rem ;
+    width: 250px; /* Tetapkan lebar gambar */
+    height: 250px; /* Tetapkan tinggi gambar */
+}
+
+.hadiah .jenis-hadiah .jenis-hadiah-title{
+    margin: 1rem auto 0.5rem;
+}
+
+
+
+/* footer */
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 0.6rem 0.1rem;
+    margin-top: 3rem;
+}
+footer .socials {
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+footer .socials a {
+    color: #fff;
+    margin: 0.75rem;
+}
+footer .socials a:hover {
+    color: black;
+}
+footer .credit {
+    font-size: 0.5rem;
+}
+footer .credit a {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.icon-song{
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+    position: fixed;
+    bottom: 1.3rem;
+    right: 1.3rem;
+    cursor: pointer;
+    color: black;
+    opacity: 0.8; 
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    line-height: 0;
+}
+
+/* Sembunyikan section hadiah dan footer */
+#hadiah,
+footer {
+    display: none;
+}
+
+/* Tampilkan hadiah dan footer setelah ikon diklik */
+#hadiah.unlocked,
+footer.unlocked {
+    display: block;
+}
+
+
+@keyframes rotating {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 80%;
+    }
+}
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;    
+    }
+    #daftar-menu {
+        display :inline-block;
+    }
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;    
+    }
+    .navbar .navbar-nav.active {
+        right :0
+    }
+    .navbar .navbar-nav a {
+        color: var(--primary-color);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.8rem;
+    }
+
+    .navbar .navbar-nav a:hover{
+        color: var(--text-color);
+    }
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+        border-bottom: 0.15rem solid var(--text-color);
+    }
+    .navbar .navbar-nav a:hover::after{
+        transform: scaleX(0.25)
+    }
+    .about .row {
+        flex-wrap: wrap;
+    }
+    .about .row .about-img img {
+        height: 26rem;
+        object-fit: cover;
+        object-fit: center;
+    }
+    .about .row .content {
+        padding: 0;
+    }
+    .about .row .content h3 {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    .about .row .content P {
+        font-size: 1.35rem;
+        font-weight: 300;
+    }
+    .jenis p,
+    .hadiah p{
+        font-size: 1.3rem;
+    }
+
+    .icon-song{
+        width: 3rem;
+        height: 3rem;
+        font-size: 4rem;
+        position: fixed;
+        bottom: 2.2rem;
+        right: 2.2rem;
+    }
+    .jenis .row .jenis-card .jenis-card-content p{
+        font-size: 1.2rem;
+    }
+    .hadiah .jenis-hadiah .hadiah-img{
+        border-radius: 15%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        margin-left: 0.6rem;
+        margin-right: 0.6rem ;
+        width: 190px; /* Tetapkan lebar gambar */
+        height: 190px; /* Tetapkan tinggi gambar */
+        }
+    }
+        
+
+/* Mobile */
+@media (max-width: 500px) {
+    html {
+        font-size: 55%;
+    }
+    .icon-song{
+        width: 3rem;
+        height: 3rem;
+        font-size: 2.5rem;
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+    }
+    .hadiah .row {
+        display: flex;
+        flex-direction: column; /* Elemen disusun vertikal */
+        align-items: center; /* Pusatkan elemen */
+        gap: 1rem; /* Tambahkan jarak antar elemen */
+    }
+
+    .hadiah .jenis-hadiah {
+        width: 90%; /* Setiap hadiah mengambil 90% dari lebar layar */
+        text-align: center;
+    }
+
+    .hadiah .jenis-hadiah .hadiah-img {
+        width: 250px; /* Gambar menyesuaikan lebar container */
+        height:250px; /* Tinggi tetap proporsional */
+    }
+}
